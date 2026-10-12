@@ -1,0 +1,21 @@
+# Scala / sbt / Mill
+/target/
+/project/target/
+/project/project/
+/out/
+.bsp/
+.metals/
+.bloop/
+
+# Generated hardware and simulation output
+/generated/
+/test_run_dir/
+/build/chiselsim/
+*.vcd
+*.fst
+
+# Editors / operating systems
+.idea/
+/.vscode/*
+!/.vscode/extensions.json
+.DS_Store

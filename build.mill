@@ -1,0 +1,19 @@
+//| mill-jvm-version: system
+package build
+
+import mill.*
+import mill.scalalib.*
+
+// SbtModule shares the standard sbt source layout at the repository root.
+object `package` extends SbtModule {
+  def scalaVersion = "2.13.18"
+
+  def mvnDeps = Seq(
+    mvn"org.chipsalliance::chisel:7.16.0"
+  )
+  def scalacPluginMvnDeps = Seq(
+    mvn"org.chipsalliance:::chisel-plugin:7.16.0"
+  )
+  def scalacOptions = Seq("-deprecation", "-feature", "-unchecked", "-language:reflectiveCalls")
+  def mainClass = Some("example.GenerateVerilog")
+}
